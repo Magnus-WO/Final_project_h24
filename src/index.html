@@ -11,28 +11,39 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <div class="navbar__logo-container">
-          <!-- <img
-            src="./assets/images/Logo_wht.png"
-            alt="Diavolas personal logo"
-            class="navbar__logo"
-          /> -->
+          <a href="#navbar" class="navbar__logo-link"></a>
         </div>
-        <a href="" class="navbar__link">Merch</a>
-        <a href="" class="navbar__link">Discography</a>
-        <a href="" class="navbar__link">Concerts</a>
-        <a href="" class="navbar__link">SoMe</a>
-        <a href="" class="navbar__link">EPK</a>
-        <a href="" class="navbar__link">Cart</a>
+        <a href="#merch-section" class="navbar__link navbar__link--merch"></a>
+        <a
+          href="#discography-section"
+          class="navbar__link navbar__link--discography"
+        ></a>
+        <a
+          href="https://www.bandsintown.com/a/15566203-diavola?came_from=257&utm_medium=web&utm_source=home&utm_campaign=search_bar"
+          target="_blank"
+          class="navbar__link navbar__link--concerts"
+        ></a>
+        <a
+          href="https://linktr.ee/diavolaoffical?fbclid=PAZXh0bgNhZW0CMTEAAaZcL3SOMhyv0MtaNuDBmvu69iLLtdUOzIf9DViLSNgrgpWFg_YOUDY6BZY_aem_rwQPoSo8cDlNIB_dpwriOA"
+          target="_blank"
+          class="navbar__link navbar__link--some"
+        ></a>
+        <a href="" class="navbar__link navbar__link--epk"></a>
+        <a href="" class="navbar__link navbar__link--cart"></a>
       </nav>
     </header>
     <main>
-      <section class="merch">
-        <h1>Merch</h1>
+      <section class="hero-section"></section>
+      <section class="merch" id="merch-section">
+        <div class="merch__header">
+          <h1>Merch</h1>
+          <div class="mearch__header--search"></div>
+        </div>
         <div class="mech__container"></div>
       </section>
-      <section class="discography">
+      <section class="discography" id="discography-section">
         <div class="discography__image-container">
           <!-- <img
             src="./assets/images/Dawn_cover.png"
@@ -68,6 +79,7 @@
       <div class="footer__contact-info"></div>
       <div class="footer__links-container"></div>
     </footer>
-    <script src="./js/app.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/hero_section.js"></script>
   </body>
 </html>

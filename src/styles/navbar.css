@@ -1,0 +1,27 @@
+.navbar {
+  width: 100%;
+  height: 10vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: var(--background-color-divider);
+}
+
+.navbar__logo-container {
+}
+.navbar__logo {
+  height: 4rem;
+  width: 18rem;
+}
+
+.navbar__link {
+  color: var(--font-color-secondary);
+  font-size: var(--font-size-x-large);
+}
+
+.navbar__link:hover {
+  cursor: pointer;
+  color: var(--font-color-main);
+}

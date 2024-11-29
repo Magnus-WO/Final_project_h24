@@ -1,0 +1,25 @@
+:root {
+  /* Spacing */
+  --spacing-small: 0.8rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.4rem;
+  --spacing-x-large: 2rem;
+
+  /* Background */
+  --background-image: url(../assets/images/Dawn_bg.png);
+  --background-repeat: no-repeat;
+  --background-size: cover;
+
+  --background-color-divider: rgba(0, 0, 0, 0.2);
+
+  /* Font size */
+  --font-size-small: 0.8rem;
+  --font-size-base: 1rem;
+  --font-size-medium: 1.2rem;
+  --font-size-large: 1.6rem;
+  --font-size-x-large: 2rem;
+
+  /* colors */
+  --font-color-main: white;
+  --font-color-secondary: #fafbde;
+}
