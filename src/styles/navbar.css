@@ -17,11 +17,11 @@
 }
 
 .navbar__link {
-  color: var(--font-color-secondary);
+  color: var(--font-color-main);
   font-size: var(--font-size-x-large);
 }
 
 .navbar__link:hover {
   cursor: pointer;
-  color: var(--font-color-main);
+  color: var(--font-color-secondary);
 }
