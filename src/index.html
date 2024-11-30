@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/hero_section.css" />
+    <link rel="stylesheet" href="./styles/merch.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>Diavola</title>
   </head>
@@ -35,15 +36,21 @@
         <a href="" class="navbar__link navbar__link--cart"></a>
       </nav>
     </header>
+
     <main>
+      <!-- Hero section -->
       <section class="hero-section"></section>
+
+      <!-- Merch -->
       <section class="merch" id="merch-section">
-        <div class="merch__header">
-          <h1>Merch</h1>
+        <div class="merch__header-container">
+          <h1 class="merch__heaer">Merch</h1>
           <div class="mearch__header--search"></div>
         </div>
-        <div class="mech__container"></div>
+        <div class="merch__container"></div>
       </section>
+
+      <!-- Discography -->
       <section class="discography" id="discography-section">
         <div class="discography__image-container">
           <!-- <img
@@ -67,6 +74,7 @@
           <div class="discography__info--tracks"></div>
         </div>
       </section>
+      <!-- Gallery -->
       <section class="gallery">
         <div class="gallery__image-container"></div>
         <button class="gallery__button" data-gallery-button="next">
@@ -76,11 +84,13 @@
         <div class="gallery__image-indicators"></div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="footer__contact-info"></div>
       <div class="footer__links-container"></div>
     </footer>
     <script src="./js/navbar.js"></script>
     <script src="./js/hero_section.js"></script>
+    <script src="./js/merch.js"></script>
   </body>
 </html>
