@@ -1,8 +1,10 @@
 //Fetching html elements
-const merchSection = document.querySelector(".merch");
+const merchSection = document.querySelector(".merch-section");
 const headerContainer = document.querySelector(".merch__header-container");
 const header = document.querySelector(".merch__header");
-const searchContainer = document.querySelector("merch__header--search");
+const searchContainer = document.querySelector(
+  ".merch__header--search-container"
+);
 const merchCardsContainer = document.querySelector(".merch__container");
 
 //Creating the array for the merch
@@ -68,6 +70,13 @@ const createMerchCards = () => {
     merchCardsContainer.appendChild(merchCard);
   });
 };
+
+//Making a search field
+const searchInput = document.createElement("input");
+searchInput.setAttribute("type", "text");
+searchInput.setAttribute("placeholder", "search products");
+
+searchContainer.append(searchInput);
 
 createMerchCards();
 console.log("test");
