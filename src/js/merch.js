@@ -38,6 +38,13 @@ const merch = [
     isAvailable: true,
   },
   {
+    image: "../src/assets/images/products/patch.jpg",
+    price: "50kr",
+    info: "Our own logo sewed onto a black patch with high quality stitching",
+    id: "patch",
+    isAvailable: true,
+  },
+  {
     image: "../src/assets/images/products/AMP-cd.png",
     price: "200kr",
     info: "A collectors CD with all bands signed on Braak Records",
@@ -79,4 +86,3 @@ searchInput.setAttribute("placeholder", "search products");
 searchContainer.append(searchInput);
 
 createMerchCards();
-console.log("test");

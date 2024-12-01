@@ -4,6 +4,7 @@
   --spacing-medium: 1rem;
   --spacing-large: 1.4rem;
   --spacing-x-large: 2rem;
+  --spacing-xx-large: 4rem;
 
   /* Background */
   --background-image: url(../assets/images/Dawn_bg.png);
@@ -22,4 +23,7 @@
   /* colors */
   --font-color-main: white;
   --font-color-secondary: #fafbde;
+
+  /* Border-radius */
+  --border-radius: 10px;
 }
