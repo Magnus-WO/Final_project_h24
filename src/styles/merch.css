@@ -30,6 +30,7 @@
 .merch__container {
   height: 90vh;
   width: 100%;
+  position: relative;
 
   display: flex;
   flex-wrap: wrap;
@@ -53,12 +54,12 @@
 
 .merch__card:hover {
   cursor: pointer;
-  scale: 1.1;
+  box-shadow: 1px 1px 40px rgba(255, 255, 255, 0.495);
   color: var(--font-color-secondary);
 }
 .merch__image {
-  height: 14rem;
-  width: 13rem;
+  height: 75%;
+  width: 85%;
   border-radius: var(--border-radius);
 }
 
@@ -72,4 +73,37 @@
 
 .merch__price:hover {
   color: var(--font-color-secondary);
+}
+
+.merch__size-selector {
+  /* display: none; */
+}
+.merch__detail {
+  display: none;
+}
+.active-card {
+  height: 34rem;
+  width: 30rem;
+  z-index: 2;
+
+  color: var(--font-color-main);
+  box-shadow: 10px 10px 20px black;
+  background-color: rgba(0, 0, 0, 0.374);
+  border-radius: var(--border-radius);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.active-card h3 {
+  font-size: var(--font-size-x-large);
+}
+.active-card img {
+  height: 60%;
+  width: 60%;
+}
+
+.active-card p {
+  font-size: var(--font-size-large);
 }
