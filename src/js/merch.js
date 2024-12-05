@@ -9,13 +9,14 @@ const merchCardsContainer = document.querySelector(".merch__container");
 const cardDetail = document.createElement("div");
 
 const addToCartButton = document.createElement("button");
+const closeCardButton = document.createElement("button");
 
 //Creating the array for the merch
 const merch = [
   {
     name: "Embers - white t",
     image: "../src/assets/images/products/embers-wht.jpg",
-    price: "250kr",
+    price: 250,
     info: "Designed by Daria, made by Black Diamond Clothing, our tshirt features a custom skull inspired by our song 'Embers'",
     id: "embers__tshirt-wht",
     sizes: ["small", "medium", "large", "xl"],
@@ -25,7 +26,7 @@ const merch = [
   {
     name: "Embers - hoodie",
     image: "../src/assets/images/products/hoodie.jpg",
-    price: "600kr",
+    price: 600,
     info: "Designed by Daria, made by Black Diamon Clothing, our hoodie features a custom skull inspired by our song 'Embers'",
     id: "embers-hoodie",
     sizes: ["small", "medium", "large", "xl"],
@@ -35,7 +36,7 @@ const merch = [
   {
     name: "Embers - black t",
     image: "../src/assets/images/products/embers-blck.jpg",
-    price: "250kr",
+    price: 250,
     info: "Designed by Daria, made by Black Diamon Clothing, our tshirt features a custom skull inspired by our song 'Embers'",
     id: "embers__tshirt-blck",
     sizes: ["small", "medium", "large", "xl"],
@@ -45,7 +46,7 @@ const merch = [
   {
     name: "Dawn - black t",
     image: "../src/assets/images/products/dawn-tshirt.jpg",
-    price: "250kr",
+    price: 250,
     info: "Designed by us, made by Diger Distro, our tshirt features our own take on the 'Delta' symbol used on our EP 'Dawn'",
     id: "dawn__tshirt-blck",
     sizes: ["small", "medium", "large", "xl"],
@@ -55,7 +56,7 @@ const merch = [
   {
     name: "Patch",
     image: "../src/assets/images/products/patch.jpg",
-    price: "50kr",
+    price: 50,
     info: "Our own logo sewed onto a black patch with high quality stitching",
     id: "patch",
     sizes: [],
@@ -65,7 +66,7 @@ const merch = [
   {
     name: "AMP - cd",
     image: "../src/assets/images/products/AMP-cd.png",
-    price: "200kr",
+    price: 200,
     info: "A collectors CD with all bands signed on Braak Records",
     id: "amp-cd",
     sizes: [],
@@ -90,7 +91,7 @@ const createMerchCards = () => {
     merchImage.classList.add("merch__image");
 
     const merchPrice = document.createElement("p");
-    merchPrice.textContent = card.price;
+    merchPrice.textContent = `${card.price}kr`;
     merchPrice.classList.add("merch__price");
 
     const merchInfo = document.createElement("p");
@@ -136,6 +137,10 @@ const createMerchCards = () => {
 function openItemDetail(card) {
   console.log(card);
 
+  cardDetail.textContent = "";
+
+  cardDetail.classList.remove("hidden-card");
+
   cardDetail.classList.add("active-card");
 
   const cardDetailImg = document.createElement("img");
@@ -167,13 +172,17 @@ function openItemDetail(card) {
 
   const cardDetailPrice = document.createElement("p");
 
+  cardDetailPrice.textContent = `${card.price}kr`;
   quantityInput.addEventListener("change", () => {
-    cardDetailPrice.textContent = card.price * quantityInput.value;
+    cardDetailPrice.textContent = `${card.price * quantityInput.value}kr`;
   });
 
   quantityLabel.appendChild(quantityInput);
 
   addToCartButton.textContent = "Add to cart";
+
+  closeCardButton.classList.add("close-button");
+  closeCardButton.textContent = "X";
 
   cardDetail.append(
     cardDetailName,
@@ -181,7 +190,8 @@ function openItemDetail(card) {
     sizeSelector,
     quantityLabel,
     cardDetailPrice,
-    addToCartButton
+    addToCartButton,
+    closeCardButton
   );
 
   console.log(cardDetail);
@@ -194,4 +204,11 @@ function openItemDetail(card) {
   merchCardsContainer.append(cardDetail);
 }
 
+//Function that closes the detailed product view
+
+closeCardButton.addEventListener("click", (e) => {
+  cardDetail.classList.remove("active-card");
+  cardDetail.classList.add("hidden-card");
+  console.log("test");
+});
 createMerchCards();

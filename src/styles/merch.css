@@ -75,6 +75,10 @@
   color: var(--font-color-secondary);
 }
 
+.hidden-card {
+  display: none;
+}
+
 .active-card {
   height: 34rem;
   width: 30rem;
@@ -105,4 +109,28 @@
 
 .active-card p {
   font-size: var(--font-size-large);
+}
+
+.active-card select {
+  width: 50%;
+  text-align: center;
+}
+
+.active-card input {
+  padding: 0 var(--spacing-small);
+}
+
+.active-card button {
+  width: 25%;
+  cursor: pointer;
+  border: 2px solid white;
+
+  background-color: transparent;
+  color: var(--font-color-main);
+  border-radius: var(--border-radius);
+}
+
+.active-card button:hover {
+  background-color: white;
+  color: black;
 }
