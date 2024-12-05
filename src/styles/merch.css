@@ -75,20 +75,18 @@
   color: var(--font-color-secondary);
 }
 
-.merch__size-selector {
-  /* display: none; */
-}
-.merch__detail {
-  display: none;
-}
 .active-card {
   height: 34rem;
   width: 30rem;
   z-index: 2;
 
+  position: absolute;
+
   color: var(--font-color-main);
   box-shadow: 10px 10px 20px black;
-  background-color: rgba(0, 0, 0, 0.374);
+  background-image: var(--background-image);
+  background-size: var(--background-size);
+  border: 1px dotted white;
   border-radius: var(--border-radius);
 
   display: flex;
@@ -102,6 +100,7 @@
 .active-card img {
   height: 60%;
   width: 60%;
+  border-radius: var(--border-radius);
 }
 
 .active-card p {

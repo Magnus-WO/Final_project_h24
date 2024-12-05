@@ -6,7 +6,7 @@ const searchContainer = document.querySelector(
   ".merch__header--search-container"
 );
 const merchCardsContainer = document.querySelector(".merch__container");
-const cardDetail = document.querySelector(".merch__detail");
+const cardDetail = document.createElement("div");
 
 const addToCartButton = document.createElement("button");
 
@@ -136,8 +136,6 @@ const createMerchCards = () => {
 function openItemDetail(card) {
   console.log(card);
 
-  merchCardsContainer.textContent = "";
-
   cardDetail.classList.add("active-card");
 
   const cardDetailImg = document.createElement("img");
@@ -192,6 +190,8 @@ function openItemDetail(card) {
     cart.push(card);
     console.log(cart);
   });
+
+  merchCardsContainer.append(cardDetail);
 }
 
 createMerchCards();
