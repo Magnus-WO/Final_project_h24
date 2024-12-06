@@ -23,6 +23,11 @@
   width: 33%;
 }
 
+.merch__header:hover {
+  cursor: default;
+  color: var(--font-color-secondary);
+}
+
 .merch__header--search-container {
   width: 33%;
 }
