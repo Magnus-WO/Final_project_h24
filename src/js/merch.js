@@ -8,6 +8,10 @@ const searchContainer = document.querySelector(
 const merchCardsContainer = document.querySelector(".merch__container");
 const cardDetail = document.createElement("div");
 
+const selectButton = document.querySelector("#filter");
+const filterOptions = document.querySelectorAll("option");
+const filterOptionsArray = Array.from(filterOptions);
+
 const addToCartButton = document.createElement("button");
 const closeCardButton = document.createElement("button");
 
@@ -46,7 +50,7 @@ const merch = [
   {
     name: "Dawn - black t",
     image: "../src/assets/images/products/dawn-tshirt.jpg",
-    price: 250,
+    price: 200,
     info: "Designed by us, made by Diger Distro, our tshirt features our own take on the 'Delta' symbol used on our EP 'Dawn'",
     id: "dawn__tshirt-blck",
     sizes: ["small", "medium", "large", "xl"],
@@ -79,7 +83,7 @@ const merch = [
 const cart = [];
 
 //Function for creating the cards
-const createMerchCards = () => {
+function createMerchCards(merch) {
   merch.forEach((card) => {
     const merchCard = document.createElement("div");
     merchCard.classList.add("merch__card");
@@ -132,11 +136,10 @@ const createMerchCards = () => {
     //Adding eventlistener
     merchCard.addEventListener("click", () => openItemDetail(card));
   });
-};
+}
+
 //Function for rendering a modal with the merch that the user clicked on
 function openItemDetail(card) {
-  console.log(card);
-
   cardDetail.textContent = "";
 
   cardDetail.classList.remove("hidden-card");
@@ -153,7 +156,6 @@ function openItemDetail(card) {
   sizeSelector.setAttribute("id", "sizeSelector");
   card.sizes.map((size) => {
     const sizeOption = document.createElement("option");
-    console.log(size);
 
     sizeOption.textContent = `${size}`;
 
@@ -194,10 +196,10 @@ function openItemDetail(card) {
     closeCardButton
   );
 
-  console.log(cardDetail);
-
   addToCartButton.addEventListener("click", () => {
     cart.push(card);
+    cart.push(sizeSelector.value);
+    cart.push(quantityInput.value);
     console.log(cart);
   });
 
@@ -205,10 +207,35 @@ function openItemDetail(card) {
 }
 
 //Function that closes the detailed product view
-
 closeCardButton.addEventListener("click", (e) => {
   cardDetail.classList.remove("active-card");
   cardDetail.classList.add("hidden-card");
-  console.log("test");
 });
-createMerchCards();
+
+//function for sorting the products
+const filterMerch = (e) => {
+  merchCardsContainer.textContent = "";
+  let merchFiltered = [...merch];
+
+  const filterType = e.target.value;
+  if (filterType === "hoodie") {
+    merchFiltered = merchFiltered.filter(
+      (merchItem) => merchItem.type === "hoodie"
+    );
+  } else if (filterType === "tshirt") {
+    merchFiltered = merchFiltered.filter(
+      (merchItem) => merchItem.type === "tshirt"
+    );
+  } else if (filterType === "misc") {
+    merchFiltered = merchFiltered.filter(
+      (merchItem) => merchItem.type === "misc"
+    );
+  } else {
+    merchFiltered = [...merch];
+  }
+  createMerchCards(merchFiltered);
+};
+
+window.addEventListener("DOMContentLoaded", createMerchCards(merch));
+
+selectButton.addEventListener("change", filterMerch);

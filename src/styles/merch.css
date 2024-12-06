@@ -117,7 +117,7 @@
 }
 
 .active-card input {
-  padding: 0 var(--spacing-small);
+  padding-left: var(--spacing-small);
 }
 
 .active-card button {
