@@ -15,11 +15,13 @@ const filterOptionsArray = Array.from(filterOptions);
 const addToCartButton = document.createElement("button");
 const closeCardButton = document.createElement("button");
 
+let selectedCard = null;
+
 //Creating the array for the merch
 const merch = [
   {
     name: "Embers - white t",
-    image: "../src/assets/images/products/embers-wht.jpg",
+    image: "../assets/images/products/embers-wht.jpg",
     price: 250,
     info: "Designed by Daria, made by Black Diamond Clothing, our tshirt features a custom skull inspired by our song 'Embers'",
     id: "embers__tshirt-wht",
@@ -29,7 +31,7 @@ const merch = [
   },
   {
     name: "Embers - hoodie",
-    image: "../src/assets/images/products/hoodie.jpg",
+    image: "../assets/images/products/hoodie.jpg",
     price: 600,
     info: "Designed by Daria, made by Black Diamon Clothing, our hoodie features a custom skull inspired by our song 'Embers'",
     id: "embers-hoodie",
@@ -39,7 +41,7 @@ const merch = [
   },
   {
     name: "Embers - black t",
-    image: "../src/assets/images/products/embers-blck.jpg",
+    image: "../assets/images/products/embers-blck.jpg",
     price: 250,
     info: "Designed by Daria, made by Black Diamon Clothing, our tshirt features a custom skull inspired by our song 'Embers'",
     id: "embers__tshirt-blck",
@@ -49,7 +51,7 @@ const merch = [
   },
   {
     name: "Dawn - black t",
-    image: "../src/assets/images/products/dawn-tshirt.jpg",
+    image: "../assets/images/products/dawn-tshirt.jpg",
     price: 200,
     info: "Designed by us, made by Diger Distro, our tshirt features our own take on the 'Delta' symbol used on our EP 'Dawn'",
     id: "dawn__tshirt-blck",
@@ -59,7 +61,7 @@ const merch = [
   },
   {
     name: "Patch",
-    image: "../src/assets/images/products/patch.jpg",
+    image: "../assets/images/products/patch.jpg",
     price: 50,
     info: "Our own logo sewed onto a black patch with high quality stitching",
     id: "patch",
@@ -69,7 +71,7 @@ const merch = [
   },
   {
     name: "AMP - cd",
-    image: "../src/assets/images/products/AMP-cd.png",
+    image: "../assets/images/products/AMP-cd.png",
     price: 200,
     info: "A collectors CD with all bands signed on Braak Records",
     id: "amp-cd",
@@ -80,7 +82,7 @@ const merch = [
   },
 ];
 //Creating an array for the merch that the user clicks on
-const cart = [];
+const cart = JSON.parse(localStorage.getItem("cartItem")) || [];
 
 //Function for creating the cards
 function createMerchCards(merch) {
@@ -139,7 +141,10 @@ function createMerchCards(merch) {
 }
 
 //Function for rendering a modal with the merch that the user clicked on
+//Includes add to cart button
 function openItemDetail(card) {
+  selectedCard = card;
+
   cardDetail.textContent = "";
 
   cardDetail.classList.remove("hidden-card");
@@ -171,6 +176,7 @@ function openItemDetail(card) {
   quantityInput.setAttribute("id", "quantity");
   quantityInput.setAttribute("min", 1);
   quantityInput.setAttribute("value", 1);
+  const quantityInputValue = parseInt(quantityInput.value);
 
   const cardDetailPrice = document.createElement("p");
 
@@ -195,13 +201,6 @@ function openItemDetail(card) {
     addToCartButton,
     closeCardButton
   );
-
-  addToCartButton.addEventListener("click", () => {
-    cart.push(card);
-    cart.push(sizeSelector.value);
-    cart.push(quantityInput.value);
-    console.log(cart);
-  });
 
   merchCardsContainer.append(cardDetail);
 }
@@ -235,6 +234,43 @@ const filterMerch = (e) => {
   }
   createMerchCards(merchFiltered);
 };
+
+//Function for adding to cart
+addToCartButton.addEventListener("click", () => {
+  const quantityInput = document.getElementById("quantity");
+  const sizeSelector = document.getElementById("sizeSelector");
+
+  const cartItem = {
+    id: selectedCard.id,
+    name: selectedCard.name,
+    img: selectedCard.image,
+    quantity: parseInt(quantityInput.value),
+    size: sizeSelector.value,
+    price: selectedCard.price * quantityInput.value,
+  };
+  console.log(cartItem);
+
+  const existingItemIndex = cart.findIndex(
+    (item) => item.id === cartItem.id && item.size === cartItem.size
+  );
+
+  if (existingItemIndex === 0) {
+    cart[existingItemIndex].quantity += cartItem.quantity;
+    cart[existingItemIndex].price =
+      selectedCard.price * cart[existingItemIndex].quantity;
+  } else {
+    cart.push({ ...cartItem, price: selectedCard.price * cartItem.quantity });
+  }
+
+  console.log(cart);
+
+  localStorage.setItem("cartItem", JSON.stringify(cart));
+
+  cardDetail.classList.remove("active-card");
+  cardDetail.classList.add("hidden-card");
+
+  selectedCard = null;
+});
 
 window.addEventListener("DOMContentLoaded", createMerchCards(merch));
 
