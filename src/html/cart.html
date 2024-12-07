@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/variables.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/cart.css" />
+    <title>Diavola cart</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" id="navbar">
+        <div class="navbar__logo-container">
+          <a href="../html/index.html" class="navbar__logo-link"></a>
+        </div>
+        <a href="#merch-section" class="navbar__link navbar__link--merch"></a>
+        <a
+          href="#discography-section"
+          class="navbar__link navbar__link--discography"
+        ></a>
+        <a
+          href="https://www.bandsintown.com/a/15566203-diavola?came_from=257&utm_medium=web&utm_source=home&utm_campaign=search_bar"
+          target="_blank"
+          class="navbar__link navbar__link--concerts"
+        ></a>
+        <a
+          href="https://linktr.ee/diavolaoffical?fbclid=PAZXh0bgNhZW0CMTEAAaZcL3SOMhyv0MtaNuDBmvu69iLLtdUOzIf9DViLSNgrgpWFg_YOUDY6BZY_aem_rwQPoSo8cDlNIB_dpwriOA"
+          target="_blank"
+          class="navbar__link navbar__link--some"
+        ></a>
+        <a href="" class="navbar__link navbar__link--epk"></a>
+        <a href="" class="navbar__link navbar__link--cart"></a>
+      </nav>
+    </header>
+    <!-- Top section/products -->
+    <main class="cart">
+      <section class="cart__products-container">
+        <div class="cart__products--header-container">
+          <h3>Your products</h3>
+        </div>
+        <div class="cart__products">
+          <!-- Products from the cart are inserted here -->
+        </div>
+      </section>
+
+      <!-- Customer details -->
+      <form class="cart__customer-details">
+        <!-- Shipping -->
+        <section class="cart__shipping">
+          <div class="cart__shipping--header">
+            <h3>Shipping</h3>
+          </div>
+          <div class="shipping__details">
+            <div class="shipping__details--labels">
+              <label for="address">Address:</label>
+              <label for="zip">Zip:</label>
+              <label for="city">City:</label>
+            </div>
+            <div class="shipping__details--inputs">
+              <input type="text" required max="80" id="address" />
+              <input type="text" required id="zip" />
+              <input type="text" required max="80" id="city" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Payment -->
+        <section class="cart__payment">
+          <div class="cart__payment--header">
+            <h3>Payment</h3>
+          </div>
+          <div class="payment__option-container">
+            <select name="payment" id="payment__selector">
+              Select payment
+              <option value="vipps">Vipps</option>
+              <option value="card">Card</option>
+            </select>
+            <p class="payment__total">Total</p>
+            <button class="order-button">Order</button>
+          </div>
+        </section>
+      </form>
+    </main>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/cart.js"></script>
+  </body>
+</html>
