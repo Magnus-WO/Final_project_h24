@@ -166,6 +166,8 @@ function openItemDetail(card) {
 
     sizeSelector.append(sizeOption);
   });
+  const quantityContainer = document.createElement("div");
+  quantityContainer.classList.add("active-card__quantity");
 
   const quantityLabel = document.createElement("label");
   quantityLabel.setAttribute("for", "quantity");
@@ -184,8 +186,8 @@ function openItemDetail(card) {
   quantityInput.addEventListener("change", () => {
     cardDetailPrice.textContent = `${card.price * quantityInput.value}kr`;
   });
-
   quantityLabel.appendChild(quantityInput);
+  quantityContainer.append(quantityLabel);
 
   addToCartButton.textContent = "Add to cart";
 
@@ -196,7 +198,7 @@ function openItemDetail(card) {
     cardDetailName,
     cardDetailImg,
     sizeSelector,
-    quantityLabel,
+    quantityContainer,
     cardDetailPrice,
     addToCartButton,
     closeCardButton

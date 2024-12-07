@@ -11,6 +11,9 @@ const soMeLink = document.querySelector(".navbar__link--some");
 const epkLink = document.querySelector(".navbar__link--epk");
 const cartLink = document.querySelector(".navbar__link--cart");
 
+const burgerMenuButton = document.querySelector(".navbar__toggle-button");
+
+const navbarLinksContainer = document.querySelector(".navbar__links-container");
 //Creating the navbar logo and appending to a link
 
 const logo = document.createElement("img");
@@ -26,3 +29,10 @@ concertsLink.textContent = "Concerts";
 soMeLink.textContent = "SoMe";
 epkLink.textContent = "EPK";
 cartLink.textContent = "Cart";
+
+burgerMenuButton.addEventListener("click", () => {
+  navbarLinksContainer.classList.toggle("active-navbar");
+  logoContainer.classList.toggle("navbar__logo-container--active");
+});
+
+console.log(window.scrollY);

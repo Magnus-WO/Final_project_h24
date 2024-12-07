@@ -3,35 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/variables.css" />
     <link rel="stylesheet" href="../styles/navbar.css" />
     <link rel="stylesheet" href="../styles/cart.css" />
+    <link rel="stylesheet" href="../styles/responsiveness.css" />
     <title>Diavola cart</title>
   </head>
   <body>
     <header>
       <nav class="navbar" id="navbar">
         <div class="navbar__logo-container">
-          <a href="../html/index.html" class="navbar__logo-link"></a>
+          <a href="./index.html" class="navbar__logo-link"></a>
         </div>
-        <a href="#merch-section" class="navbar__link navbar__link--merch"></a>
-        <a
-          href="#discography-section"
-          class="navbar__link navbar__link--discography"
-        ></a>
-        <a
-          href="https://www.bandsintown.com/a/15566203-diavola?came_from=257&utm_medium=web&utm_source=home&utm_campaign=search_bar"
-          target="_blank"
-          class="navbar__link navbar__link--concerts"
-        ></a>
-        <a
-          href="https://linktr.ee/diavolaoffical?fbclid=PAZXh0bgNhZW0CMTEAAaZcL3SOMhyv0MtaNuDBmvu69iLLtdUOzIf9DViLSNgrgpWFg_YOUDY6BZY_aem_rwQPoSo8cDlNIB_dpwriOA"
-          target="_blank"
-          class="navbar__link navbar__link--some"
-        ></a>
-        <a href="" class="navbar__link navbar__link--epk"></a>
-        <a href="" class="navbar__link navbar__link--cart"></a>
+        <div class="navbar__links-container">
+          <a href="#merch-section" class="navbar__link navbar__link--merch"></a>
+          <a
+            href="#discography-section"
+            class="navbar__link navbar__link--discography"
+          ></a>
+          <a
+            href="https://www.bandsintown.com/a/15566203-diavola?came_from=257&utm_medium=web&utm_source=home&utm_campaign=search_bar"
+            target="_blank"
+            class="navbar__link navbar__link--concerts"
+          ></a>
+          <a
+            href="https://linktr.ee/diavolaoffical?fbclid=PAZXh0bgNhZW0CMTEAAaZcL3SOMhyv0MtaNuDBmvu69iLLtdUOzIf9DViLSNgrgpWFg_YOUDY6BZY_aem_rwQPoSo8cDlNIB_dpwriOA"
+            target="_blank"
+            class="navbar__link navbar__link--some"
+          ></a>
+          <a href="" class="navbar__link navbar__link--epk"></a>
+          <a
+            href="../html/cart.html"
+            class="navbar__link navbar__link--cart"
+          ></a>
+        </div>
+        <div class="navbar__toggle-button-container">
+          <button class="navbar__toggle-button">
+            <i class="fa-solid fa-bars fa-2x navbar__toggle-logo"></i>
+          </button>
+        </div>
       </nav>
     </header>
     <!-- Top section/products -->

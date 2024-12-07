@@ -5,15 +5,19 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: relative;
 
   background-color: var(--background-color-divider);
 }
 
-.navbar__logo-container {
-}
 .navbar__logo {
   height: 4rem;
   width: 18rem;
+}
+.navbar__links-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .navbar__link {

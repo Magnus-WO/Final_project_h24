@@ -1,6 +1,7 @@
 .cart {
   width: 100%;
   min-height: 100vh;
+  height: 100%;
   color: var(--font-color-main);
   margin-top: var(--spacing-medium);
 
@@ -256,7 +257,7 @@
   position: absolute;
 
   color: var(--font-color-main);
-  box-shadow: 10px 10px 20px black;
+  box-shadow: var(--box-shadow);
   background-image: var(--background-image);
   background-size: var(--background-size);
   border: 1px dotted white;
