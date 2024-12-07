@@ -25,3 +25,10 @@
   cursor: pointer;
   color: var(--font-color-secondary);
 }
+
+.navbar__toggle-button {
+  background-color: transparent;
+  border: none;
+  color: var(--font-color-main);
+  display: none;
+}
