@@ -1,3 +1,22 @@
+/* Laptop - cart counter */
+
+@media screen and (max-width: 1150px) {
+  .navbar__cart-counter {
+    bottom: 10px;
+    right: 75px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar__cart-counter {
+    bottom: 10px;
+    right: 65px;
+  }
+  .merch__container {
+    gap: 4rem;
+  }
+}
+
 /* Tablet */
 @media screen and (max-width: 768px) {
   .navbar__logo-container {
@@ -20,7 +39,11 @@
     background-color: green;
     width: 50%;
   }
-
+  .navbar__cart-counter {
+    bottom: 30px;
+    right: 65px;
+    font-size: var(--font-size-small);
+  }
   .navbar__toggle-button {
     display: inline;
     width: 30%;
@@ -74,6 +97,10 @@
   }
   .active-navbar {
     width: 60%;
+  }
+  .navbar__cart-counter {
+    bottom: 25px;
+    right: 95px;
   }
   /* Hero section */
   .hero-section {
@@ -186,5 +213,21 @@
   /* Cart feedback */
   .cart__feedback {
     width: 90%;
+  }
+}
+
+/* Mobile medium */
+@media screen and (max-width: 375px) {
+  .navbar__cart-counter {
+    bottom: 25px;
+    right: 80px;
+  }
+}
+
+/* Mobile small */
+@media screen and (max-width: 320px) {
+  .navbar__cart-counter {
+    bottom: 25px;
+    right: 65px;
   }
 }

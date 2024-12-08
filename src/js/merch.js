@@ -1,4 +1,6 @@
 //Fetching html elements
+const cartCounter = document.querySelector(".navbar__cart-counter");
+
 const merchSection = document.querySelector(".merch-section");
 const headerContainer = document.querySelector(".merch__header-container");
 const header = document.querySelector(".merch__header");
@@ -137,6 +139,7 @@ function createMerchCards(merch) {
 
     //Adding eventlistener
     merchCard.addEventListener("click", () => openItemDetail(card));
+    cartCounter.textContent = cart.length;
   });
 }
 
@@ -250,7 +253,6 @@ addToCartButton.addEventListener("click", () => {
     size: sizeSelector.value,
     price: selectedCard.price * quantityInput.value,
   };
-  console.log(cartItem);
 
   const existingItemIndex = cart.findIndex(
     (item) => item.id === cartItem.id && item.size === cartItem.size
@@ -264,9 +266,8 @@ addToCartButton.addEventListener("click", () => {
     cart.push({ ...cartItem, price: selectedCard.price * cartItem.quantity });
   }
 
-  console.log(cart);
-
   localStorage.setItem("cartItem", JSON.stringify(cart));
+  cartCounter.textContent = cart.length;
 
   cardDetail.classList.remove("active-card");
   cardDetail.classList.add("hidden-card");

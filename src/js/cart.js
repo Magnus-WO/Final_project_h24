@@ -1,4 +1,6 @@
 //Fetching elements from html
+const cartCounter = document.querySelector(".navbar__cart-counter");
+
 const cart = document.querySelector(".cart");
 const productsContainer = document.querySelector(".cart__products");
 const orderForm = document.querySelector(".cart__customer-details");
@@ -30,6 +32,7 @@ const removeProduct = (id) => {
   cartArray = remainingItems;
   renderCart();
   totalPrice();
+  cartCounter.textContent = cartArray.length;
 };
 
 //Function for rendering cart items
@@ -161,7 +164,10 @@ const placeOrder = (e) => {
   cart.append(feedBackModal);
 
   localStorage.clear();
+  cartArray = JSON.parse(localStorage.getItem("cartItem")) || [];
+
   productsContainer.textContent = "Your order has been placed :)";
+  cartCounter.textContent = cartArray.length;
 };
 
 //Closing feedback modal
@@ -175,6 +181,7 @@ window.addEventListener("DOMContentLoaded", () => {
   getCart();
   renderCart();
   totalPrice();
+  cartCounter.textContent = cartArray.length;
 });
 orderButton.addEventListener("click", placeOrder);
 exitButton.addEventListener("click", closeFeedback);

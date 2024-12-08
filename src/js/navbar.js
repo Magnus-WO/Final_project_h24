@@ -14,8 +14,8 @@ const cartLink = document.querySelector(".navbar__link--cart");
 const burgerMenuButton = document.querySelector(".navbar__toggle-button");
 
 const navbarLinksContainer = document.querySelector(".navbar__links-container");
-//Creating the navbar logo and appending to a link
 
+//Creating the navbar logo and appending to a link
 const logo = document.createElement("img");
 logo.setAttribute("src", "../assets/images/Logo_wht.png");
 logo.classList.add("navbar__logo");
@@ -34,5 +34,3 @@ burgerMenuButton.addEventListener("click", () => {
   navbarLinksContainer.classList.toggle("active-navbar");
   logoContainer.classList.toggle("navbar__logo-container--active");
 });
-
-console.log(window.scrollY);
