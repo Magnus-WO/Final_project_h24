@@ -1,7 +1,7 @@
 //Fetching elements from html
-const cartCounter = document.querySelector(".navbar__cart-counter");
+const cartCounterInCart = document.querySelector(".navbar__cart-counter");
 
-const cart = document.querySelector(".cart");
+const cartSection = document.querySelector(".cart");
 const productsContainer = document.querySelector(".cart__products");
 const orderForm = document.querySelector(".cart__customer-details");
 
@@ -32,7 +32,7 @@ const removeProduct = (id) => {
   cartArray = remainingItems;
   renderCart();
   totalPrice();
-  cartCounter.textContent = cartArray.length;
+  cartCounterInCart.textContent = cartArray.length;
 };
 
 //Function for rendering cart items
@@ -135,7 +135,7 @@ const placeOrder = (e) => {
 
     feedBackMessageContainer.append(feedBackMessage);
     feedBackModal.append(feedBackMessageContainer, exitButton);
-    cart.append(feedBackModal);
+    cartSection.append(feedBackModal);
 
     return;
   }
@@ -161,13 +161,13 @@ const placeOrder = (e) => {
     feedBackMessage3
   );
   feedBackModal.append(feedBackMessageContainer, exitButton);
-  cart.append(feedBackModal);
+  cartSection.append(feedBackModal);
 
   localStorage.clear();
   cartArray = JSON.parse(localStorage.getItem("cartItem")) || [];
 
   productsContainer.textContent = "Your order has been placed :)";
-  cartCounter.textContent = cartArray.length;
+  cartCounterInCart.textContent = cartArray.length;
 };
 
 //Closing feedback modal
@@ -181,7 +181,7 @@ window.addEventListener("DOMContentLoaded", () => {
   getCart();
   renderCart();
   totalPrice();
-  cartCounter.textContent = cartArray.length;
+  cartCounterInCart.textContent = cartArray.length;
 });
 orderButton.addEventListener("click", placeOrder);
 exitButton.addEventListener("click", closeFeedback);

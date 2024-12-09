@@ -1,0 +1,122 @@
+.discography {
+  width: 100%;
+  height: 100vh;
+  background-image: var(--background-image);
+  background-size: var(--background-size);
+  background-repeat: var(--background-repeat);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discography__container {
+  background-color: var(--background-color-divider2);
+  border: 2px solid black;
+
+  width: 90%;
+  height: 70%;
+  display: flex;
+}
+
+.discography__image-container {
+  width: 50%;
+  height: 100%;
+  border-right: 2px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discography__image-container img {
+  width: 65%;
+  height: 80%;
+  box-shadow: 10px 10px 100px #831734;
+  box-shadow: var(--box-shadow);
+}
+
+/* Info container */
+.discography__info-container {
+  width: 50%;
+  height: 100%;
+  /* border: 2px solid white; */
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.discography__info--dawn-container {
+  width: 50%;
+  height: 50%;
+  /* border: 2px solid white; */
+  color: var(--font-color-main);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dawn-container__title-logo,
+.dawn-container__info {
+  height: 50%;
+  font-size: var(--font-size-large);
+  display: flex;
+  justify-content: center;
+}
+
+.dawn-container__title-logo {
+  gap: var(--spacing-medium);
+  align-items: flex-end;
+  font-size: var(--font-size-x-large);
+}
+
+.dawn-container__title-logo h4 {
+  font-weight: normal;
+}
+.dawn-container__info p {
+  font-size: var(--font-size-large);
+  color: var(--font-color-secondary);
+  align-items: flex-start;
+  font-weight: normal;
+}
+
+.discography__info--dawn-container img {
+  height: 4rem;
+  width: 3rem;
+}
+
+/* Audio player */
+.discography__info--audio-container {
+  width: 50%;
+  height: 50%;
+  /* border: 2px solid white; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+.audio__title {
+  color: var(--font-color-main);
+}
+.audio-player {
+  width: 70%;
+}
+
+/* Tracks */
+.discography__info--tracks-container {
+  width: 100%;
+  height: 50%;
+  border-top: 2px solid black;
+  color: var(--font-color-secondary);
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.discography__track {
+  font-size: var(--font-size-large);
+}

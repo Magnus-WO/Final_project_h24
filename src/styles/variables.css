@@ -12,6 +12,7 @@
   --background-size: cover;
 
   --background-color-divider: rgba(0, 0, 0, 0.2);
+  --background-color-divider2: rgba(0, 0, 0, 0.5);
 
   /* Font size */
   --font-size-small: 0.8rem;
@@ -28,4 +29,5 @@
   --border-radius: 10px;
 
   --box-shadow: 10px 10px 20px black;
+  --box-shadow2: 10px 10px 20px white;
 }
