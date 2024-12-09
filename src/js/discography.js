@@ -91,11 +91,12 @@ const createAudioController = () => {
   audioTitle.classList.add("audio__title");
 
   const buttonContainer = document.createElement("div");
-  buttonContainer.classList.add("media__button-container");
+  buttonContainer.classList.add("audio__button-container");
 
   const audioController = document.createElement("audio");
-  // audioController.setAttribute("src", "./assets/audio/Embers.mp3");
   audioController.setAttribute("controls", true);
+  audioController.setAttribute("controlslist", "nodownload");
+
   audioController.classList.add("audio-player");
 
   const prevButton = document.createElement("button");
@@ -133,9 +134,10 @@ const createAudioController = () => {
     });
     button.addEventListener("mousedown", () => {
       button.style.backgroundColor = "black";
+      button.style.color = "white";
     });
     button.addEventListener("mouseup", () => {
-      button.style.backgroundColor = "#2164c9";
+      button.style.backgroundColor = "transparent";
     });
   });
   buttonContainer.append(prevButton, nextButton);

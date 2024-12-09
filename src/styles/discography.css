@@ -100,6 +100,32 @@
   box-shadow: var(--box-shadow);
   border-radius: 86rem;
 }
+.audio-player:hover {
+  cursor: pointer;
+}
+.audio__button-container {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.audio__title {
+  font-weight: normal;
+  font-size: var(--font-size-large);
+}
+.audio-button {
+  background-color: transparent;
+  width: 40%;
+  border: 1px solid white;
+  color: var(--font-color-main);
+  border-radius: 86rem;
+}
+
+.audio-button:hover {
+  cursor: pointer;
+  background-color: var(--font-color-main);
+  opacity: 0.5;
+  color: var(--font-color-tertiary);
+}
 
 /* Tracks */
 .discography__info--tracks-container {
@@ -107,6 +133,7 @@
   height: 50%;
   border-top: 2px solid black;
   color: var(--font-color-secondary);
+  padding: var(--spacing-large) 0;
 
   display: flex;
   flex-direction: column;
