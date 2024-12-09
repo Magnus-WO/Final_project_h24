@@ -97,6 +97,7 @@
 }
 .audio-player {
   width: 70%;
+  height: 15%;
   box-shadow: var(--box-shadow);
   border-radius: 86rem;
 }
@@ -114,7 +115,7 @@
 }
 .audio-button {
   background-color: transparent;
-  width: 40%;
+  width: 4rem;
   border: 1px solid white;
   color: var(--font-color-main);
   border-radius: 86rem;
