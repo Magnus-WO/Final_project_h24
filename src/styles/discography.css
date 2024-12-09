@@ -13,7 +13,7 @@
   background-color: var(--background-color-divider2);
   border: 2px solid black;
 
-  width: 90%;
+  width: 85%;
   height: 70%;
   display: flex;
 }
@@ -39,7 +39,6 @@
 .discography__info-container {
   width: 50%;
   height: 100%;
-  /* border: 2px solid white; */
 
   display: flex;
   flex-wrap: wrap;
@@ -48,9 +47,7 @@
 .discography__info--dawn-container {
   width: 50%;
   height: 50%;
-  /* border: 2px solid white; */
   color: var(--font-color-main);
-
   display: flex;
   flex-direction: column;
 }
@@ -88,7 +85,6 @@
 .discography__info--audio-container {
   width: 50%;
   height: 50%;
-  /* border: 2px solid white; */
 
   display: flex;
   flex-direction: column;
@@ -101,6 +97,8 @@
 }
 .audio-player {
   width: 70%;
+  box-shadow: var(--box-shadow);
+  border-radius: 86rem;
 }
 
 /* Tracks */
