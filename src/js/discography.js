@@ -111,7 +111,7 @@ const createAudioController = () => {
     button.classList.add("audio-button");
     button.addEventListener("click", () => {
       offset = button.dataset.audioButton === "next" ? offset + 1 : offset - 1;
-      prevButton.style.visibility = "hidden";
+      // prevButton.style.visibility = "hidden";
 
       for (let i = offset - 1; i === offset - 1; i++) {
         audio = audioArray[i];
