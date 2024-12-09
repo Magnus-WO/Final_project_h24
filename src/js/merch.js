@@ -33,7 +33,7 @@ const merch = [
   },
   {
     name: "Embers - hoodie",
-    image: "./assets/images/products/hoodie.jpg",
+    image: "./assets/images/hoodie.jpg",
     price: 600,
     info: "Designed by Daria, made by Black Diamon Clothing, our hoodie features a custom skull inspired by our song 'Embers'",
     id: "embers-hoodie",
@@ -43,7 +43,7 @@ const merch = [
   },
   {
     name: "Embers - black t",
-    image: "./assets/images/products/embers-blck.jpg",
+    image: "./assets/images/embers-blck.jpg",
     price: 250,
     info: "Designed by Daria, made by Black Diamon Clothing, our tshirt features a custom skull inspired by our song 'Embers'",
     id: "embers__tshirt-blck",
@@ -53,7 +53,7 @@ const merch = [
   },
   {
     name: "Dawn - black t",
-    image: "./assets/images/products/dawn-tshirt.jpg",
+    image: "./assets/images/dawn-tshirt.jpg",
     price: 200,
     info: "Designed by us, made by Diger Distro, our tshirt features our own take on the 'Delta' symbol used on our EP 'Dawn'",
     id: "dawn__tshirt-blck",
@@ -63,7 +63,7 @@ const merch = [
   },
   {
     name: "Patch",
-    image: "./assets/images/products/patch.jpg",
+    image: "./assets/images/patch.jpg",
     price: 50,
     info: "Our own logo sewed onto a black patch with high quality stitching",
     id: "patch",
@@ -73,7 +73,7 @@ const merch = [
   },
   {
     name: "AMP - cd",
-    image: "./assets/images/products/AMP-cd.png",
+    image: "./assets/images/AMP-cd.png",
     price: 200,
     info: "A collectors CD with all bands signed on Braak Records",
     id: "amp-cd",
