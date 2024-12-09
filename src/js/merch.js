@@ -83,8 +83,10 @@ const merch = [
     url: "https://braakrecords.com/",
   },
 ];
+
 //Creating an array for the merch that the user clicks on
 const cart = JSON.parse(localStorage.getItem("cartItem")) || [];
+window.addEventListener("DOMContentLoaded", createMerchCards(merch));
 
 //Function for creating the cards
 function createMerchCards(merch) {
@@ -274,7 +276,5 @@ addToCartButton.addEventListener("click", () => {
 
   selectedCard = null;
 });
-
-window.addEventListener("DOMContentLoaded", createMerchCards(merch));
 
 selectButton.addEventListener("change", filterMerch);
