@@ -30,23 +30,23 @@ const tracksContainer = document.querySelector(
 const audioArray = [
   {
     title: "Dawn",
-    src: "../assets/audio/Dawn.mp3",
+    src: "./assets/audio/Dawn.mp3",
   },
   {
     title: "Breaking Point",
-    src: "../assets/audio/Breaking Point.mp3",
+    src: "./assets/audio/Breaking Point.mp3",
   },
   {
     title: "Fading",
-    src: "../assets/audio/Fading.mp3",
+    src: "./assets/audio/Fading.mp3",
   },
   {
     title: "Embers",
-    src: "../assets/audio/Embers.mp3",
+    src: "./assets/audio/Embers.mp3",
   },
   {
     title: "Relentless",
-    src: "../assets/audio/Relentless.mp3",
+    src: "./assets/audio/Relentless.mp3",
   },
 ];
 
@@ -54,7 +54,7 @@ const audioArray = [
 const loadDiscography = () => {
   //creating audio image and appending it
   const audioImage = document.createElement("img");
-  audioImage.setAttribute("src", "../assets/images/Dawn_cover.png");
+  audioImage.setAttribute("src", "./assets/images/Dawn_cover.png");
   audioImage.setAttribute("alt", "an image of the cover for our EP Dawn");
 
   audioImageContainer.append(audioImage);
@@ -67,7 +67,7 @@ const loadDiscography = () => {
   infoText.textContent = "Out now!";
 
   const infoHeaderIcon = document.createElement("img");
-  infoHeaderIcon.setAttribute("src", "../assets/icons/Dawn_icon_white.png");
+  infoHeaderIcon.setAttribute("src", "./assets/icons/Dawn_icon_white.png");
   infoHeaderIcon.setAttribute(
     "alt",
     "the logo for our EP Dawn, featuring our take on the Delta symbol"

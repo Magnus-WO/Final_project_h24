@@ -17,7 +17,7 @@ const navbarLinksContainer = document.querySelector(".navbar__links-container");
 
 //Creating the navbar logo and appending to a link
 const logo = document.createElement("img");
-logo.setAttribute("src", "../assets/images/Logo_wht.png");
+logo.setAttribute("src", "./assets/images/Logo_wht.png");
 logo.classList.add("navbar__logo");
 
 logoLink.appendChild(logo);

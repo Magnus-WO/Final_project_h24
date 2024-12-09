@@ -5,7 +5,7 @@ const infoContainer = document.querySelector(".hero-section__info-container");
 
 //Creating elements
 const heroImage = document.createElement("img");
-heroImage.setAttribute("src", "../assets/images/hero-section2.png");
+heroImage.setAttribute("src", "./assets/images/hero-section2.png");
 heroImage.classList.add("hero-section__image");
 
 heroSection.append(heroImage);
