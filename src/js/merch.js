@@ -23,7 +23,7 @@ let selectedCard = null;
 const merch = [
   {
     name: "Embers - white t",
-    image: "/assets/images/products/embers-wht.jpg",
+    image: "./assets/images/embers-wht.jpg",
     price: 250,
     info: "Designed by Daria, made by Black Diamond Clothing, our tshirt features a custom skull inspired by our song 'Embers'",
     id: "embers__tshirt-wht",
