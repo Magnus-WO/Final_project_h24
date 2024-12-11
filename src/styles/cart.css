@@ -1,3 +1,8 @@
+@font-face {
+  font-family: crimson-text;
+  src: url(../assets/fonts/CrimsonText-Regular.ttf);
+}
+
 .cart {
   width: 100%;
   min-height: 100vh;
@@ -12,6 +17,7 @@
   gap: var(--spacing-medium);
 
   position: relative;
+  font-family: crimson-text;
 }
 
 /* Products */

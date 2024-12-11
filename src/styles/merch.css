@@ -1,6 +1,12 @@
+@font-face {
+  font-family: crimson-text;
+  src: url(../assets/fonts/CrimsonText-Regular.ttf);
+}
+
 .merch-section {
   min-height: 110vh;
   width: 100%;
+  font-family: crimson-text;
 
   display: flex;
   flex-direction: column;

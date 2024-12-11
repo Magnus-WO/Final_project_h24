@@ -1,6 +1,12 @@
+@font-face {
+  font-family: crimson-text;
+  src: url(../assets/fonts/CrimsonText-Regular.ttf);
+}
+
 .navbar {
   width: 100%;
   height: 10vh;
+  font-family: crimson-text;
 
   display: flex;
   align-items: center;
