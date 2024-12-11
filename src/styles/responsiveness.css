@@ -156,7 +156,7 @@
   }
   .active-card {
     height: 25rem;
-    width: 12rem;
+    width: 18rem;
   }
 
   .active-card h3 {
@@ -164,7 +164,7 @@
     font-weight: normal;
   }
   .active-card img {
-    width: 80%;
+    width: 70%;
     height: 45%;
   }
   .active-card__quantity {
