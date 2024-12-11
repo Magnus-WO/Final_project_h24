@@ -10,7 +10,7 @@ I have used this project as a starter for my bands website. Everything is design
 Only for use by me and my band
 
 ##Link to the deployment:
-https://final-project-h24-4ig5qsk8u-magnus-wos-projects.vercel.app/
+https://final-project-h24.vercel.app/
 
 ##Link to GitHub repo:
 https://github.com/Magnus-WO/Final_project_h24
